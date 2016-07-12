@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>How Do I Declare A Block in Objective-C?</title>
+  <title>How do I write in Objective-C and Swift?</title>
   <style>
     body {
       background-color: #002b36;
@@ -82,9 +82,12 @@
     }
 
     code {
-      font-size: 16px;
-      margin-bottom: 2em;
-      margin-left: 20px;
+        display: block;
+        font-family: Menlo, monaco, monospace;
+        font-size: 20px;
+        margin-bottom: 3em;
+        margin-left: 40px;
+        margin-top: 1.5em;
     }
 
     footer {
@@ -109,62 +112,52 @@
 </head>
 
 <body>
-  <h1>How Do I Declare A Block in Objective-C?</h1>
-
+  <h1>How do I write in Objective-C and Swift?</h1>
+  
   <div>
-    <h2>As a <strong>local variable</strong>:</h2>
-    <code>
-      <span class="return">returnType</span> (^<span class="name">blockName</span>)(<span class="parameter-types">parameterTypes</span>) = ^<span class="return">returnType</span>(<span class="parameters">parameters</span>) {...};
-    </code>
+      <h2>Init a <strong>dictionary</strong>:</h2>
+      <code>
+          var <span class="name">dictionaryName</span> = [<span class="parameter-types">keyType</span>: <span class="parameter-types">valueType</span>]()
+      </code>
   </div>
-
+  
   <div>
-    <h2>As a <strong>property</strong>:</h2>
-    <code>
-      @property (nonatomic, copy, <span class="nullability">nullability</span>) <span class="return">returnType</span> (^<span class="name">blockName</span>)(<span class="parameter-types">parameterTypes</span>);
-    </code>
+      <h2>Unwrap an optional value using <strong>guard</strong>:</h2>
+      <code>
+          guard let <span class="name">unwrappedValue</span> = <span class="name">optionalValue</span> else {</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithNilValue</span>()</br>
+          }</br></br>
+          <span class="parameters">continueUseUnwrappedValue</span>()
+      </code>
   </div>
-
+  
   <div>
-    <h2>As a <strong>method parameter</strong>:</h2>
-    <code>
-      - (void)someMethodThatTakesABlock:(<span class="return">returnType</span> (^<span class="nullability">nullability</span>)(<span class="parameter-types">parameterTypes</span>))<span class="name">blockName</span>;
-    </code>
+      <h2>Modularized constants:</h2>
+      <code>
+          struct <span class="name">ModuleName</span> {</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantA</span> = <span class="parameters">constructConstantA</span>()</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantB</span> = <span class="parameters">constructConstantB</span>()</br>
+          }
+      </code>
   </div>
-
+  
   <div>
-    <h2>As an <strong>argument to a method call</strong>:</h2>
-    <code>
-      [someObject someMethodThatTakesABlock:^<span class="return">returnType</span> (<span class="parameters">parameters</span>) {...}];
-    </code>
+      <h2>Enumeration with <strong>associated value</strong>:</h2>
+      <code>
+          enum <span class="return">EnumType</span> {</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;case <span class="parameters">BranchName</span>(<span class="return">MyType</span>, <span class="return">YourType</span>)</br>
+          }</br>
+          </br>
+          ...</br>
+          </br>
+          switch <span class="parameters">enumValue</span> {</br>
+          case .<span class="parameters">BranchName</span>(let <span class="parameters">myValue</span>, let <span class="parameters">yourValue</span>):</br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithMyValueAndYourValue</span>()</br>
+          }
+      </code>
   </div>
 
-  <div>
-    <h2>As a <strong>typedef</strong>:</h2>
-    <code>
-      typedef <span class="return">returnType</span> (^<span class="name">TypeName</span>)(<span class="parameter-types">parameterTypes</span>);<br/>
-      <span class="name">TypeName</span> blockName = ^<span class="return">returnType</span>(<span class="parameters">parameters</span>) {...};
-    </code>
-  </div>
-
-  <div class="disclaimer">
-    This site is not intended to be an exhaustive list of all possible uses of blocks.<br>
-    If you find yourself needing syntax not listed here, it is likely that a <strong>typedef</strong> would make your code more readable.<br>
-    <br>
-    Unable to access this site due to the profanity in the URL? <strong><a href="http://goshdarnblocksyntax.com">http://goshdarnblocksyntax.com</a></strong> is a more work-friendly mirror.
-  </div>
-
-  <footer>By <a href="http://lazerwalker.com">Mike Lazer-Walker</a>, who has a very bad memory for this sort of thing.</footer>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-43658906-1', 'fuckingblocksyntax.com');
-    ga('send', 'pageview');
-  </script>
+  <footer>By <a href="https://github.com/LouisZhu">Louis Zhu</a>, who has a very bad memory for this sort of thing.</footer>
 
 </body>
 </html>
