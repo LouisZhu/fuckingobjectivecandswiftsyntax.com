@@ -112,6 +112,8 @@
 </head>
 
 <body>
+  <style>#forkongithub a{background:#AA3333;color:#fff;text-decoration:none;font-family:Helvetica Neue,sans-serif;text-align:center;font-weight:bold;padding:5px 40px;font-size:1rem;line-height:2rem;position:relative;transition:0.5s;}#forkongithub a:hover{background:#c11;color:#fff;}#forkongithub a::before,#forkongithub a::after{content:"";width:100%;display:block;position:absolute;top:1px;left:0;height:1px;background:#fff;}#forkongithub a::after{bottom:1px;top:auto;}@media screen and (min-width:800px){#forkongithub{position:absolute;display:block;top:0;right:0;width:200px;overflow:hidden;height:200px;z-index:9999;}#forkongithub a{width:200px;position:absolute;top:60px;right:-60px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);box-shadow:4px 4px 10px rgba(0,0,0,0.3);}}</style><span id="forkongithub"><a href="https://github.com/LouisZhu/fuckingobjectivecandswiftsyntax.com">Fork me on GitHub</a></span><br /><br />
+  
   <h1>How do I write in Objective-C and Swift?</h1>
   
   <div>
@@ -124,9 +126,9 @@
   <div>
       <h2>Unwrap an optional value using <strong>guard</strong>:</h2>
       <code>
-          guard let <span class="name">unwrappedValue</span> = <span class="name">optionalValue</span> else {</br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithNilValue</span>()</br>
-          }</br></br>
+          guard let <span class="name">unwrappedValue</span> = <span class="name">optionalValue</span> else {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithNilValue</span>()<br/>
+          }<br/><br/>
           <span class="parameters">continueUseUnwrappedValue</span>()
       </code>
   </div>
@@ -134,9 +136,9 @@
   <div>
       <h2>Modularized constants:</h2>
       <code>
-          struct <span class="name">ModuleName</span> {</br>
-          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantA</span> = <span class="parameters">constructConstantA</span>()</br>
-          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantB</span> = <span class="parameters">constructConstantB</span>()</br>
+          struct <span class="name">ModuleName</span> {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantA</span> = <span class="parameters">constructConstantA</span>()<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;static let <span class="name">constantB</span> = <span class="parameters">constructConstantB</span>()<br/>
           }
       </code>
   </div>
@@ -144,15 +146,15 @@
   <div>
       <h2>Enumeration with <strong>associated value</strong>:</h2>
       <code>
-          enum <span class="return">EnumType</span> {</br>
-          &nbsp;&nbsp;&nbsp;&nbsp;case <span class="parameters">BranchName</span>(<span class="return">MyType</span>, <span class="return">YourType</span>)</br>
-          }</br>
-          </br>
-          ...</br>
-          </br>
-          switch <span class="parameters">enumValue</span> {</br>
-          case .<span class="parameters">BranchName</span>(let <span class="parameters">myValue</span>, let <span class="parameters">yourValue</span>):</br>
-          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithMyValueAndYourValue</span>()</br>
+          enum <span class="return">EnumType</span> {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;case <span class="name">BranchName</span>(<span class="return">MyType</span>, <span class="return">YourType</span>)<br/>
+          }<br/>
+          <br/>
+          ...<br/>
+          <br/>
+          switch <span class="name">enumValue</span> {<br/>
+          case .<span class="name">BranchName</span>(let <span class="parameters">myValue</span>, let <span class="parameters">yourValue</span>):<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="parameters">dealWithMyValueAndYourValue</span>()<br/>
           }
       </code>
   </div>
