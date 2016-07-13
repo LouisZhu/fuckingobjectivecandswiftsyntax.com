@@ -26,7 +26,7 @@
       font-weight: normal;
     }
 
-    .return {
+    .type {
       color: #2aa198;
     }
 
@@ -128,9 +128,19 @@
   <h1>How do I write in Objective-C and Swift?</h1>
   
   <div>
+      <h2>Objective-C <strong>generics</strong>:</h2>
+      <code>
+          NSArray&lt;<span class="type">ItemType</span> *&gt; *<span class="name">arrayName</span> = [[NSArray&lt;<span class="type">ItemType</span> *&gt; alloc] init];<br/><br/>
+          NSDictionary&lt;<span class="type">KeyType</span> *, <span class="type">ValueType</span> *&gt; *<span class="name">dictionaryName</span> = [[NSDictionary&lt;<span class="type">KeyType</span> *, <span class="type">ValueType</span> *&gt; alloc] init];<br/><br/>
+          NSArray&lt;NSDictionary&lt;<span class="type">KeyType</span> *, <span class="type">ValueType</span> *&gt; *&gt; *<span class="name">arrayName</span> = [[NSArray&lt;NSDictionary&lt;<span class="type">KeyType</span> *, <span class="type">ValueType</span> *&gt; *&gt; alloc] init];<br/><br/>
+          NSDictionary&lt;<span class="type">KeyType</span> *, NSArray&lt;<span class="type">ItemType</span> *&gt; *&gt; *<span class="name">dictionaryName</span> = [[NSDictionary&lt;<span class="type">KeyType</span> *, NSArray&lt;<span class="type">ItemType</span> *&gt; *&gt; alloc] init];
+      </code>
+  </div>
+  
+  <div>
       <h2>Init a <strong>dictionary</strong>:</h2>
       <code>
-          var <span class="name">dictionaryName</span> = [<span class="parameter-types">keyType</span>: <span class="parameter-types">valueType</span>]()
+          var <span class="name">dictionaryName</span> = [<span class="type">keyType</span>: <span class="type">valueType</span>]()
       </code>
   </div>
   
@@ -157,8 +167,8 @@
   <div>
       <h2>Enumeration with <strong>associated value</strong>:</h2>
       <code>
-          enum <span class="return">EnumType</span> {<br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;case <span class="name">BranchName</span>(<span class="return">MyType</span>, <span class="return">YourType</span>)<br/>
+          enum <span class="type">EnumType</span> {<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;case <span class="name">BranchName</span>(<span class="type">MyType</span>, <span class="type">YourType</span>)<br/>
           }<br/>
           <br/>
           ...<br/>
